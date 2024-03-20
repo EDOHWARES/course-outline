@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Outline</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        body {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            font-family: sans-serif;
+        }
+
+
+        .load-screen {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+            color: gray;
+            z-index: 99999999;
+        }
+
+        .load-screen img {
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+        }
+
+        .load-screen button {
+            color: white;
+            padding: .5rem;
+            background-color: #F44336;
+            margin-top: .4rem;
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+
+        .load-screen button:hover {
+            transform: scale(.9);
+        }
+
+        .container header {
+            display: flex;
+            align-items: start;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .container header .title {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .container header .title h3 {
+            font-weight: lighter;
+        }
+
+        .logo {
+            margin-right: 5rem;
+        }
+
+        .logo img {
+            width: 5rem;
+            height: 5rem;
+        }
+
+        .tables {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .tables div {
+            text-align: center;
+            margin-bottom: 3px;
+        }
+
+        .tables div small {
+            color: green;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            text-align: left;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid gray;
+        }
+
+        th {
+            text-align: center;
+        }
+
+        th, td {
+            padding: .5rem .1rem;;
+        }
+
+        caption {
+            text-align: start;
+            margin-bottom: 2px;
+        }
+
+        .sign {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .btns button {
+            padding: .5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all .5s ease-in;
+        }
+
+        .btns button:hover {
+            transform: scale(1.1);
+        }
+
+        
+        .btns .s {
+            background-color:  #4CAF50;
+        }
+
+        .btns .r {
+            background-color: #2196F3;
+        }
+
+        .btns .c {
+            background-color:  #F44336;
+        }
+
+        footer {
+            margin-top: 5rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="load-screen">
+        <div>
+            <img src="/loader.gif" alt="loading">
+        </div>
+        <div>
+            <p>...taking too long</p>
+            <button onclick="removeLoadScreen()">Quit</button>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="/f-logo.png" alt="logo">
+            </div>
+            <div class="title">
+                <h1>FEDERAL UNIVERSITY OF TECHNOLOGY MINNA</h1>
+                <h3>Course Registration 2023/2024 Session: CPT Department</h3>
+                <h4><b>2023/1/92214CT, Edoh Emmanuel Gideon, 100 Level</b></h4>
+            </div>
+        </header>
+        
+        <section class="tables">
+            <div>
+                <table>
+                    <caption>1st Semester Courses</caption>
+                    <tr>
+                        <th>S/NO</th>
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+                        <th>Unit</th>
+                        <th>Semester</th>
+                        <th>Nature</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>GST111</td>
+                        <td>Communication in English</td>
+                        <td>2</td>
+                        <td>1st</td>
+                        <td>Core</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>MTH101</td>
+                        <td>Elementary Mathematics 1</td>
+                        <td>3</td>
+                        <td>1st</td>
+                        <td>Core</td>   
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>PHY101</td>
+                        <td>General Physics I</td>
+                        <td>2</td>
+                        <td>1st</td>
+                        <td>Core</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>PHY107</td>
+                        <td>General Practical Physics I</td>
+                        <td>1</td>
+                        <td>1st</td>
+                        <td>Core</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>COS101</td>
+                        <td>Introduction to Computing Sciences</td>
+                        <td>3</td>
+                        <td>1st</td>
+                        <td>Core</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>FUTM-CPT111</td>
+                        <td>Probability for Computer Science</td>
+                        <td>3</td>
+                        <td>1st</td>
+                        <td>Core</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>FUTM-CPT112</td>
+                        <td>Front-End Web Development I</td>
+                        <td>2</td>
+                        <td>1st</td>
+                        <td>Core</td>
+                    </tr>
+                </table>
+                <small>Total Credit Unit is 17</small>
+            </div>
+            <div>
+                <table>
+                    <caption>2nd Semester Courses</caption>
+                    <tr>
+                        <th>S/NO</th>
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+                        <th>Unit</th>
+                        <th>Semester</th>
+                        <th>Nature</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>MTH102</td>
+                        <td>Elementary Mathematics II</td>
+                        <td>3</td>
+                        <td>2nd</td>
+                        <td>Core</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>PHY108</td>
+                        <td>General Practical Physics II</td>
+                        <td>1</td>
+                        <td>2nd</td>
+                        <td>Core</td>   
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>STA111</td>
+                        <td>Descriptive Statistics</td>
+                        <td>3</td>
+                        <td>2nd</td>
+                        <td>Core</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>GST112</td>
+                        <td>Nigerian Peoples and Culture</td>
+                        <td>2</td>
+                        <td>2nd</td>
+                        <td>Core</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>PHY102</td>
+                        <td>General Physics II</td>
+                        <td>2</td>
+                        <td>2nd</td>
+                        <td>Core</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>COS 102</td>
+                        <td>Introduction to Problem Solving</td>
+                        <td>3</td>
+                        <td>2nd</td>
+                        <td>Core</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>FUTM-CPT122</td>
+                        <td>Introduction to Computer Hardware Systems and Maintenance</td>
+                        <td>3</td>
+                        <td>2nd</td>
+                        <td>Core</td>
+                    </tr>
+                </table>
+                <small>Total Credit Unit is 17</small>
+            </div>
+            <div class="sign">
+                <p>Level Adviser Sign./Date:_____________</p>
+                <p>HOD Sign./Date:_____________</p>
+                <p>Dean Sign./Date:_____________</p>
+            </div>
+            <div class="btns">
+                <button class="s" onclick="displayLoadScreen()">Submit</button>
+                <button class="r" onclick="displayLoadScreen()">Reset</button>
+                <button class="c" onclick="displayLoadScreen()">Cancel</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <small>&copy; 2024 Powered by Information Technology Services</small>
+    </footer>
+</body>
+<script>
+   const loadScreen = document.querySelector('.load-screen')
+   const displayLoadScreen = () => {
+    loadScreen.style.display = 'flex';
+    window.scrollTo(0, 0)
+   };
+
+   const removeLoadScreen = () => {
+    loadScreen.style.display = 'none';
+   };
+</script>
+</html>
